@@ -229,7 +229,6 @@ form .form-group input:valid~i {
 
     100% {
         transform: rotate(0);
-
         z-index: 1;
     }
 }
