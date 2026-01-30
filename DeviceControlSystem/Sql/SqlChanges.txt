@@ -1,0 +1,13 @@
+﻿create database Ai_Control
+
+use Ai_control
+
+create table user_master (
+id int  identity(1,1) primary key,
+User_Name varchar(250),
+Password varchar(250),
+Email varchar(250)
+
+);
+
+insert into user_master values ('Pratikop','123','Pratikjangam302@gmail.com')
