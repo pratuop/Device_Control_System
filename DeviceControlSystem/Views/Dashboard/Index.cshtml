@@ -2,5 +2,59 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+}@{
+    ViewData["Title"] = "Dashboard";
 }
-<h1>pratik op </h1>
+
+@section Styles {
+    <link rel="stylesheet" href="~/Css/dashboard.css" />
+}
+
+<div class="app">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+        <div class="top-actions">
+            <button onclick="toggleTheme()">🌙</button>
+        </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="body">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+            <h3>Device Control</h3>
+
+            <ul>
+                <li onclick="showConnections()">🔌 Connection</li>
+                <li>
+                    <a asp-controller="Dashboard"
+                       asp-action="Logout">🚪 Logout</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="content">
+            <h2>Dashboard</h2>
+
+            <div id="connections" style="display:none;">
+                <h4>Select Connection Type</h4>
+
+                <div class="cards">
+                    <div class="card">📱 → 💻<p>Mobile → Laptop</p></div>
+                    <div class="card">💻 → 📱<p>Laptop → Mobile</p></div>
+                    <div class="card">💻 → 💻<p>Laptop → Laptop</p></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Js/dashboard.js"></script>
+}
