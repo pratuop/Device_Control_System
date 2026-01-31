@@ -11,7 +11,7 @@ namespace DeviceControlSystem.Controllers
         [HttpPost]
         public IActionResult Login(string Username, string Password)
         {
-            return View();
+           return  Redirect ("~/Dashboard/index");
         }
 
         [HttpPost]
